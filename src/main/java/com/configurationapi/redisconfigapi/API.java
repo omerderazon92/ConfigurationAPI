@@ -17,6 +17,11 @@ public class API {
         this.repository = repository;
     }
 
+    /**
+     * Remote configuration endpoint
+     * @param projectName
+     * @return
+     */
     @GetMapping("/getConfigList/{projectName}")
     public Map<String, String> getConfiguration(@PathVariable("projectName") final String projectName) {
         Map<String, String> all = repository.findAll(projectName);
